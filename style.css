@@ -67,8 +67,9 @@ h1 {
 #minecraftmmo-card {
     background-image: url("/assets/covers/minecraftmmo.png");
 }
-#geometrydashrevamped-card {
-    background-image: url("/assets/covers/geometrydashrevamped.png");
+#webdashers-card {
+    background-image: url("/assets/covers/webdashers.png");
+    background-size: cover;
 }
 #celeste-card {
     background-image: url("/assets/covers/celeste.png");
@@ -83,9 +84,11 @@ h1 {
 }
 #mpnc-card {
     background-image: url("/assets/covers/mpnc.png");
+    background-size: cover;
 }
 #ducklife-card {
     background-image: url("/assets/covers/ducklife.webp");
+    background-size: cover;
 }
 
 #frame {
