@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div id="app">
+            <h2 id="title"></h2>
+            <h3 id="author"></h3>
+            <div id="frame">
+                <iframe id="canvas" width="480" height="360" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+            <p id="description"></p>
+
+            <script>
+                async function start() {
+                    let gName = new URLSearchParams(window.location.search).get("g")
+                    let r = await fetch("/assets/" + gName + ".json");
+                    let gData = await r.json();
+                    document.getElementById("title").textContent = gData['title'];
+                    document.getElementById("author").textContent = gData['author'];
+                    document.querySelector("iframe").src = gData['frame'];
+                    document.getElementById("description").innerHTML = gData['description'];
+                }
+                window.onload = () => { start() }
+            </script>
+        </div>
+    </body>
+</html>

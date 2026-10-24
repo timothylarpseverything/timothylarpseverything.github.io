@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div id="app">
+            <h2 id="title">Scratching Dawn Remake</h2>
+            <h3 id="author">Cutupuss</h3>
+            <br>
+            <div id="button-row">
+                <button onclick="selectEpisode1()">Episode 1</button>
+                <button onclick="selectEpisode2()">Episode 2</button>
+                <button onclick="selectEpisode3()">Episode 3</button>
+            </div>
+            <br>
+            <div id="frame">
+                <iframe id="canvas" width="480" height="360" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+            <p id="description">After a succession of vacations to different places in the world, most recently an adventure in tribal tombs, the scratch gang have decided to celebrate this winter vacation in Scratch's secluded winter lodge. However, Pico has brought something mysterious with him, and the gang will soon find out that an isolated lodge in the middle of nowhere is far from where they will want to be when everything goes down...<br>Your choices will determine who makes it out alive during this eventful night.</p>
+            <script>
+                async function selectEpisode1() {
+                    document.querySelector("iframe").src = "/assets/sdr1/index.html"
+                }
+                async function selectEpisode2() {
+                    document.querySelector("iframe").src = "/assets/sdr2/index.html"
+                }
+                async function selectEpisode3() {
+                    document.querySelector("iframe").src = "/assets/sdr3/index.html"
+                }
+            </script>
+        </div>
+    </body>
+</html>

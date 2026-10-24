@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(11, 0, 17);
+    background: linear-gradient(180deg, rgba(20, 0, 32, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    min-height: calc(100vh - 1rem);
+
+    color: #e7e7e7;
+    font-family: 'Inter', sans-serif;
+
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+#app {
+    width: 90%;
+}
+
+#big-br {
+    display: block;
+    height: 3rem;
+}
+
+.card {
+    width: calc(25% - 20px);
+    aspect-ratio: 4/3;
+    display: block;
+    border: solid 2px #eee;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card, .card:hover, .card:focus, .card:active {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.section-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#seashine-card {
+    background-image: url("/assets/covers/seashine.png");
+}
+#driftchase-card {
+    background-image: url("/assets/covers/driftchase.png");
+}
+#catcatsmash-card {
+    background-image: url("/assets/covers/catcatsmash.png");
+}
+#minecraftmmo-card {
+    background-image: url("/assets/covers/minecraftmmo.png");
+}
+#geometrydashrevamped-card {
+    background-image: url("/assets/covers/geometrydashrevamped.png");
+}
+#celeste-card {
+    background-image: url("/assets/covers/celeste.png");
+    background-size: cover;
+}
+#celeste2-card {
+    background-image: url("/assets/covers/celeste2.png");
+    background-size: cover;
+}
+#sdr-card {
+    background-image: url("/assets/covers/sdr.png");
+}
+
+#frame {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    font: inherit;
+    color: inherit;
+    background-color: #380087;
+    border: none;
+    border-radius: 8px;
+    padding: 6px;
+}
