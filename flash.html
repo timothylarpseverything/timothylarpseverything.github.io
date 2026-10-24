@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+        <script src="/assets/ruffle/ruffle.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h2 id="title"></h2>
+            <h3 id="author"></h3>
+            <div id="frame">
+                
+            </div>
+            <p id="description"></p>
+
+            <script>
+                async function start() {
+                    let gName = new URLSearchParams(window.location.search).get("g")
+                    let r = await fetch("/assets/" + gName + ".json");
+                    let gData = await r.json();
+                    document.getElementById("title").textContent = gData['title'];
+                    document.getElementById("author").textContent = gData['author'];
+                    document.getElementById("description").innerHTML = gData['description'];
+
+                    window.RufflePlayer = window.RufflePlayer || {};
+                    let ruffle = window.RufflePlayer.newest();
+                    let player = ruffle.createPlayer();
+                    let container = document.getElementById("frame");
+                    container.appendChild(player);
+                    player.ruffle().load(gData['swf']);
+                }
+                window.onload = () => { start() }
+            </script>
+        </div>
+    </body>
+</html>

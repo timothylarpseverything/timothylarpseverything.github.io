@@ -81,6 +81,12 @@ h1 {
 #sdr-card {
     background-image: url("/assets/covers/sdr.png");
 }
+#mpnc-card {
+    background-image: url("/assets/covers/mpnc.png");
+}
+#ducklife-card {
+    background-image: url("/assets/covers/ducklife.webp");
+}
 
 #frame {
     display: flex;
